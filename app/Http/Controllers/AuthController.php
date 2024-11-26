@@ -27,6 +27,9 @@ class AuthController extends Controller
         }
     }
 
+    public function dashboard() {
+        return view('Page.dashboard');
+    }
     public function logout() {
         Auth::guard('admin')->logout();
         return redirect('login')->with('message', 'Anda Berhasil Sign Out');
