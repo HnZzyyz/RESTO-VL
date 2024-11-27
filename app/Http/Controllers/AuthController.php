@@ -23,7 +23,7 @@ class AuthController extends Controller
         if(Auth::guard('admin')->attempt($token)) {
                 return redirect('/')->with('message','Anda Berhasil Sign In');
         } else {
-            return back()->with('pesan','Username atau Password Tidak Terdaftar');
+            return back()->with('notif','Username atau Password Tidak Terdaftar');
         }
     }
 
