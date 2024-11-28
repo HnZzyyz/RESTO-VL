@@ -23,30 +23,45 @@
             @csrf
             <div class="grid gap-6 mb-6 md:grid-cols-2">
                 <div>
-                    <label for="id_menu" class="block mb-2 text-sm font-medium text-gray-950 dark:text-gray-800">ID
-                        Menu</label>
-                    <input type="text" id="fid_menu" name="id_menu"
+                    <label for="id_pelanggan" class="block mb-2 text-sm font-medium text-gray-950 dark:text-gray-800">ID
+                        Pelanggan</label>
+                    <input type="text" id="id_pelanggan" name="id_pelanggan"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        required value="{{ $idmnu }}" readonly />
+                        required value="{{ $data->id_pelanggan }}" readonly />
                 </div>
                 <div>
-                    <label for="nama_menu" class="block mb-2 text-sm font-medium text-gray-950 dark:text-gray-800">Nama
-                        Menu</label>
-                    <input type="text" id="nama_menu" name="nama_menu"
+                    <label for="nama_pelangan" class="block mb-2 text-sm font-medium text-gray-950 dark:text-gray-800">Nama
+                        Pelanggan</label>
+                    <input type="text" id="nama_pelangan" name="nama_pelanggan"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Masukkan nama menu" required />
+                        placeholder="Masukkan nama pelanggan" required value="{{ $data->nama_pelanggan }}" />
                 </div>
                 <div>
-                    <label for="harga" class="block mb-2 text-sm font-medium text-gray-950 dark:text-gray-800">Harga</label>
-                    <input type="text" id="harga" name="harga"
+                    <label for="jenis_kelamin" class="block mb-2 text-sm font-medium text-gray-950 dark:text-gray-800">Jenis Kelamin</label>
+                    <select id="jenis_kelamin" name="jenis_kelamin"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option {{ $data->jenis_kelamin == 'Laki-laki' ? 'selected' : '' }} >Laki-laki</option>
+                        <option {{ $data->jenis_kelamin == 'Perempuan' ? 'selected' : '' }} >Perempuan</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="no_hp" class="block mb-2 text-sm font-medium text-gray-950 dark:text-gray-800">No Handphone</label>
+                    <input type="text" id="no_hp" name="no_hp"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Masukkan harga" required />
+                        placeholder="Masukkan no handphone" required value="{{ $data->no_hp }}"/>
+                </div>
+                <div>
+                    <label for="alamat" class="block mb-2 text-sm font-medium text-gray-950 dark:text-gray-800">Alamat</label>
+                    <input type="text" id="alamat" name="alamat"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Masukkan alamat" required value="{{ $data->alamat }}" />
                 </div>
             </div>
             <div class="flex items-end">
                 <button type="submit"
                     class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Submit</button>
             </div>
+
         </form>
 
     </div>

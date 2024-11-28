@@ -18,7 +18,7 @@
     </style>
 </head>
 
-<body class="bg-gray-600 flex flex-col md:flex-row p-4 gap-4">
+<body class="bg-gray-600 flex flex-col md:flex-row p-[10px] gap-4">
     @if (session('notif'))
         <div id="notification"
             class="fixed top-4 right-4 flex items-center p-4 mb-4 text-sm text-red-800 bg-red-100 rounded-lg shadow-lg transition-transform transform opacity-0 scale-90"
@@ -118,7 +118,14 @@
                     </svg>
                     Meja
                 </a>
-                <a href="#"
+                <a href="{{ route('pelanggan') }}"
+                    class="w-full bg-gray-600 text-white px-4 py-2 rounded flex items-center outline hover:bg-gray-700 transition duration-300">
+                    <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A12.053 12.053 0 0112 15c2.293 0 4.443.672 6.121 1.804M8.5 9a3.5 3.5 0 117 0 3.5 3.5 0 01-7 0z" />
+                    </svg>
+                    Pelanggan
+                </a>
+                <a href="{{ route('order') }}"
                     class="w-full bg-gray-600 text-white px-4 py-2 rounded flex items-center outline hover:bg-gray-700 transition duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 16 16">
                         <path fill="currentColor" fill-rule="evenodd"
