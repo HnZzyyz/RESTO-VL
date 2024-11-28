@@ -42,6 +42,7 @@ Route::middleware('auth:admin')->group(function() {
     
     // <-------------Order--------------> //
     Route::get('/order',[OrderController::class,'index'])->name('order');
+    Route::get('/order/buat',[OrderController::class,'buatOrder'])->name('buat-order');
     // <-----------End-Order------------> //    
 });
 

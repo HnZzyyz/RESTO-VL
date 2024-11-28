@@ -21,7 +21,6 @@
                             <th class="border border-gray-300 px-4 py-2 text-left">Nama Petugas</th>
                             <th class="border border-gray-300 px-4 py-2 text-left">No Meja</th>
                             <th class="border border-gray-300 px-4 py-2 text-left">Status</th>
-                            <th class="border border-gray-300 px-4 py-2 text-left">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -33,12 +32,6 @@
                                 <td class="border border-gray-300 px-4 py-2">Deru</td>
                                 <td class="border border-gray-300 px-4 py-2">1</td>
                                 <td class="border border-gray-300 px-4 py-2">Belum Bayar</td>
-                                <td class="border border-gray-300 px-4 py-2">
-                                    <a class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
-                                        href="/meja/ubah/">Ubah</a>
-                                    <a class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition"
-                                        href="/meja/hapus/">Hapus</a>
-                                </td>
                             </tr>
                             <tr class="hover:bg-blue-50">
                                 <td class="border border-gray-300 px-4 py-2">1</td>
@@ -48,12 +41,6 @@
                                 <td class="border border-gray-300 px-4 py-2">Deru</td>
                                 <td class="border border-gray-300 px-4 py-2">1</td>
                                 <td class="border border-gray-300 px-4 py-2">Belum Bayar</td>
-                                <td class="border border-gray-300 px-4 py-2">
-                                    <a class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
-                                        href="/meja/ubah/">Ubah</a>
-                                    <a class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition"
-                                        href="/meja/hapus/">Hapus</a>
-                                </td>
                             </tr>
                     </tbody>
                 </table>
@@ -63,7 +50,7 @@
             </div>
         </div>
         <div class="flex justify-end mt-4">
-            <a href="{{ route('meja-tambah-data') }}"
+            <a href="{{ route('buat-order') }}"
                 class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition">
                 Buat Order
             </a>

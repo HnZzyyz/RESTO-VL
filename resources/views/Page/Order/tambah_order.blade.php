@@ -21,12 +21,51 @@
 
         <form method="post">
             @csrf
-            <div class="grid gap-6 mb-6 md:grid-cols-2">
+            <div class="grid gap-2 mb-6 md:grid-cols-2">
                 <div>
-                    <label for="id_pesanan" class="block mb-2 text-sm font-medium text-gray-950 dark:text-gray-800">ID Pesanan</label>
-                    <input type="text" id="id_pesanan" name="id_pesanan"
+                    <label for="nama_user" class="block mb-2 text-sm font-medium text-gray-950 dark:text-gray-800">Nama
+                        Petugas</label>
+                    <input type="text" id="nama_user" name="nama_user"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        required value="{{ $idmnu }}" readonly />
+                        required readonly />
+                </div>
+                <div>
+                    <label for="nama_pelanggan" class="block mb-2 text-sm font-medium text-gray-950 dark:text-gray-800">Nama
+                        Pelanggan</label>
+                    <input type="text" id="nama_pelanggan" name="nama_pelanggan"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        required />
+                </div>
+                <div>
+                    <label for="nama_menu" class="block mb-2 text-sm font-medium text-gray-950 dark:text-gray-800">Nama
+                        Menu</label>
+                    <input type="text" id="nama_menu" name="nama_menu"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        required />
+                </div>
+                <div>
+                    <label for="jumlah"
+                        class="block mb-2 text-sm font-medium text-gray-950 dark:text-gray-800">Jumlah</label>
+                    <input type="number" id="jumlah" name="jumlah"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        required />
+                </div>
+                <div>
+                    <label for="no_meja"
+                        class="block mb-2 text-sm font-medium text-gray-950 dark:text-gray-800">No Meja</label>
+                    <select id="no_meja" size="2" name="no_meja"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-gray-500 dark:focus:border-gray-500">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
                 </div>
             </div>
             <div class="flex items-end">
@@ -34,6 +73,41 @@
                     class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Submit</button>
             </div>
         </form>
-
+        <div class="flex mt-8">
+            <div class="overflow-x-auto w-full">
+                <table class="w-full rounded- border-collapse border border-gray-300 bg-gray-200">
+                    <thead>
+                        <tr class="bg-gray-600 text-white">
+                            <th class="border border-gray-300 px-4 py-2 text-left">ID Pesanan</th>
+                            <th class="border border-gray-300 px-4 py-2 text-left">Nama Menu</th>
+                            <th class="border border-gray-300 px-4 py-2 text-left">Nama Pelanggan</th>
+                            <th class="border border-gray-300 px-4 py-2 text-left">Jumlah</th>
+                            <th class="border border-gray-300 px-4 py-2 text-left">Nama Petugas</th>
+                            <th class="border border-gray-300 px-4 py-2 text-left">No Meja</th>
+                            <th class="border border-gray-300 px-4 py-2 text-left">Harga</th>
+                            <th class="border border-gray-300 px-4 py-2 text-left">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-blue-50">
+                            <td class="border border-gray-300 px-4 py-2">1</td>
+                            <td class="border border-gray-300 px-4 py-2">Kelinci Bakar</td>
+                            <td class="border border-gray-300 px-4 py-2">Braga</td>
+                            <td class="border border-gray-300 px-4 py-2">2</td>
+                            <td class="border border-gray-300 px-4 py-2">Deru</td>
+                            <td class="border border-gray-300 px-4 py-2">1</td>
+                            <td class="border border-gray-300 px-4 py-2">Rp 25.000</td>
+                            <td class="border border-gray-300 px-4 py-2">
+                                <a class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition"
+                                    href="/meja/hapus/">Hapus</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                {{-- <div class="mt-4">
+                    {{ $data->onEachSide(1)->links('vendor.pagination') }}
+                </div> --}}
+            </div>
+        </div>
     </div>
 @endsection
